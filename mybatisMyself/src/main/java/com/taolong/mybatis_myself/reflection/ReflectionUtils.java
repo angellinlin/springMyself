@@ -3,7 +3,7 @@ package com.taolong.mybatis_myself.reflection;
 import java.lang.reflect.Field;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * 为bean设置属性值得工具类
  */
 public class ReflectionUtils {

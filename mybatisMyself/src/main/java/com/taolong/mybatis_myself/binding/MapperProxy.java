@@ -7,7 +7,7 @@ import java.util.Collection;
 import com.taolong.mybatis_myself.session.SqlSession;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * mapper接口的动态代理类
  */
 public class MapperProxy<T> implements InvocationHandler{

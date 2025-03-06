@@ -1,7 +1,7 @@
 package com.taolong.mybatis_myself.config;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * 用于存放解析mapper.xml的内容
  */
 public class MappedStatement {

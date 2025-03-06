@@ -5,7 +5,7 @@ import java.lang.reflect.Proxy;
 import com.taolong.mybatis_myself.session.SqlSession;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * 动态代理类的生产工厂
  */
 public class MapperProxyFactory {

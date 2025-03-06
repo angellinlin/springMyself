@@ -6,7 +6,7 @@ import java.util.List;
 import com.taolong.mybatis_myself.config.MappedStatement;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * sqlsession操作数据库的任务都是由executor完成
  */
 public interface Executor {

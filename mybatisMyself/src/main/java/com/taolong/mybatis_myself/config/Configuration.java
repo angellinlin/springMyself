@@ -7,7 +7,7 @@ import com.taolong.mybatis_myself.binding.MapperProxyFactory;
 import com.taolong.mybatis_myself.session.SqlSession;
 
 /**
- * @author hongtaolong
+ * @author zhouguilong6
  * 简化版本的Configuration类，用于封装配置信息
  */
 public class Configuration {
