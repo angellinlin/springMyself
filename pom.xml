@@ -11,6 +11,7 @@
     <modules>
         <module>springBeanMyself</module>
         <module>springBeanMyselfVersion2</module>
+        <module>mybatisMyself</module>
     </modules>
 
     <properties>
