@@ -4,7 +4,9 @@ import java.lang.reflect.Field;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.taolong.mybatis_myself.config.MappedStatement;
 import com.taolong.mybatis_myself.reflection.ReflectionUtils;
@@ -23,9 +25,9 @@ public class DefaultResultSetHandler implements ResultSetHandler {
 
 
 	@Override
-	public <E> List<E> handleResultSets(ResultSet resultSet) throws SQLException {
+	public <E> Set<E> handleResultSets(ResultSet resultSet) throws SQLException {
 		if (resultSet == null) return null;
-		List<E> ret = new ArrayList<E>();
+		Set<E> ret = new HashSet<>();
 		String className = mappedStatement.getResultType();
 		Class<?> returnClass = null;
 		//使用反射处理

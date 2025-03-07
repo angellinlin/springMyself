@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Set;
 
 import com.taolong.mybatis_myself.config.Configuration;
 import com.taolong.mybatis_myself.config.MappedStatement;
@@ -28,7 +29,7 @@ public class SimpleExecutor implements Executor {
 
 
 	@Override
-	public <E> List<E> query(MappedStatement ms, Object parameter) throws SQLException {
+	public <E> Set<E> query(MappedStatement ms, Object parameter) throws SQLException {
 		//1.获取连接
 		Connection connection = getConnection();
 		//2.实例化statementhandler

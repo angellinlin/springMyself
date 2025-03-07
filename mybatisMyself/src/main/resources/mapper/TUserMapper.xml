@@ -11,7 +11,7 @@
 	
 	<select id="selectAll" resultType="com.taolong.mybatis_myself.bean.TUser">
 		select
-		id, userName, realName, sex, mobile, email, note
+		id, user_name userName, real_name realName, sex, mobile, email, note
 		from t_user
 	</select>
 	

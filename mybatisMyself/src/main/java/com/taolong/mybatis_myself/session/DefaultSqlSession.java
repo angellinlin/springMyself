@@ -1,7 +1,9 @@
 package com.taolong.mybatis_myself.session;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import com.taolong.mybatis_myself.config.Configuration;
 import com.taolong.mybatis_myself.config.MappedStatement;
@@ -23,14 +25,15 @@ public class DefaultSqlSession implements SqlSession {
 
 	@Override
 	public <T> T selectOne(String statement,Object parameter) {
-		List<Object> selectList = this.selectList(statement, parameter);
+		Set<Object> selectList = this.selectList(statement, parameter);
 		if (selectList == null || selectList.isEmpty()) return null;
-		return (T)selectList.get(0);//返回第一个
+		return (T)selectList.iterator().next();//返回第一个
 	}
 
 	@Override
-	public <E> List<E> selectList(String statement, Object parameter)  {
+	public <E> Set<E> selectList(String statement, Object parameter)  {
 		MappedStatement ms = configuration.getMappedStatement(statement);
+		ArrayList<Object> list = new ArrayList<>();
 		try {
 			return executor.query(ms, parameter);
 		} catch (SQLException e) {

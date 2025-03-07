@@ -2,6 +2,7 @@ package com.taolong.mybatis_myself.executor;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Set;
 
 import com.taolong.mybatis_myself.config.MappedStatement;
 
@@ -11,5 +12,5 @@ import com.taolong.mybatis_myself.config.MappedStatement;
  */
 public interface Executor {
 
-	<E> List<E> query(MappedStatement ms,Object parameter) throws SQLException;
+	<E> Set<E> query(MappedStatement ms, Object parameter) throws SQLException;
 }

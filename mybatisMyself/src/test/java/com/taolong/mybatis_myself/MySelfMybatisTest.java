@@ -7,6 +7,9 @@ import com.taolong.mybatis_myself.mapper.TUserMapper;
 import com.taolong.mybatis_myself.session.SqlSession;
 import com.taolong.mybatis_myself.session.SqlSessionFactory;
 
+import java.util.List;
+import java.util.Set;
+
 public class MySelfMybatisTest {
 
     /**
@@ -17,7 +20,7 @@ public class MySelfMybatisTest {
 		SqlSessionFactory factory = new SqlSessionFactory();
 		SqlSession session = factory.openSession();
 		TUserMapper userMapper = session.getMapper(TUserMapper.class);
-		TUser user = userMapper.selectByPrimaryKey(128);
+		TUser user = userMapper.selectByPrimaryKey(129);
 		System.out.println(user);
 	}
 }
