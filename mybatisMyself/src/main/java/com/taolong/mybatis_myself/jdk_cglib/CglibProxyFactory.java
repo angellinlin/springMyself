@@ -13,13 +13,11 @@ import java.lang.reflect.Method;
 public class CglibProxyFactory implements MethodInterceptor {
     //得到目标对象
     private Object target;
-
     //使用构造方法传递目标对象
     public CglibProxyFactory(Object target) {
         super();
         this.target = target;
     }
-
     //创建代理对象
     public Object createProxy(){
         //1.创建Enhancer
@@ -31,7 +29,6 @@ public class CglibProxyFactory implements MethodInterceptor {
 
         return enhancer.create();
     }
-
 
     //参数一:代理对象;参数二:需要增强的方法;参数三:需要增强方法的参数;参数四:需要增强的方法的代理
     public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
