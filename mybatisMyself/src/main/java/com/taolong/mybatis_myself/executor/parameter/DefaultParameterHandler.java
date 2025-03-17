@@ -3,17 +3,15 @@ package com.taolong.mybatis_myself.executor.parameter;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * @author zhouguilong6
+ */
 public class DefaultParameterHandler implements ParameterHandler {
-
 	private Object parameter;
-	
-	
-	
 	public DefaultParameterHandler(Object parameter) {
 		super();
 		this.parameter = parameter;
 	}
-
 	@Override
 	public void setParameters(PreparedStatement ps) throws SQLException {
 		if (parameter == null) return;

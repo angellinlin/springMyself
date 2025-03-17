@@ -11,6 +11,9 @@ import java.util.Set;
 import com.taolong.mybatis_myself.config.MappedStatement;
 import com.taolong.mybatis_myself.reflection.ReflectionUtils;
 
+/**
+ * @author zhouguilong6
+ */
 public class DefaultResultSetHandler implements ResultSetHandler {
 
 	private MappedStatement mappedStatement;
@@ -38,9 +41,9 @@ public class DefaultResultSetHandler implements ResultSetHandler {
 				Field[] declaredFields = returnClass.getDeclaredFields();
 				for (Field field : declaredFields) {
 					String fieldName = field.getName();
-					if (field.getType().getSimpleName().equals("String")) {
+					if ("String".equals(field.getType().getSimpleName())) {
 						ReflectionUtils.setBeanProp(entry, fieldName, resultSet.getString(fieldName));
-					}else if(field.getType().getSimpleName().equals("Integer")) {
+					}else if("Integer".equals(field.getType().getSimpleName())) {
 						ReflectionUtils.setBeanProp(entry, fieldName, resultSet.getInt(fieldName));
 					}//more type
 					ret.add(entry);
